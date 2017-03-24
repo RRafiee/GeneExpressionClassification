@@ -98,7 +98,7 @@ setwd("~/NanoString")
 library(NanoStringNorm) # normalising nanoString raw data
 library(e1071)          # Support verctor machine (SVM) classifier
 library(parallel)       # mclapply speeds up probability estimation 
-
+library(pheatmap)
 
 # Reading an input csv file including raw gene expression data of 19 genes as well as conrtol genes
 NanostringSamplesGenes <- as.data.frame(read.csv("~/NanoString/81RawNanoString08112016_TestSample.csv",header=T))
@@ -148,6 +148,7 @@ Nano1_log2_Normalised_4 <- (NanoStriang_mRNA_norm_tech_bio-min(NanoStriang_mRNA_
 Nano1_log2_Normalised_4 <- as.data.frame(Nano1_log2_Normalised_4)
 
 Sample_test <- Nano1_log2_Normalised_4
+pheatmap(Sample_test,color = colorRampPalette(c("navy", "white", "firebrick3"))(100),clustering_method = "ward.D2")
 
 ################################################################################################
 ############################### End of normalisation procedure #################################
