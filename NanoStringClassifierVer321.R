@@ -305,11 +305,12 @@ for (ttt in 1:nrow(predProbTemp)) # number of samples
 
 # Optimising the Gamma and C (parameters of the SVM classifier)
 #--------------------------------------------------------
-
+# Training stage: using Support Vector Machine (SVM) with RBF kernel. SVM model parameters were optimised based on a grid-based search technique  
 i=1234
 
 model <- svm(TrainingsetRNA_seq19,y_training,scale = F, tolerance = 0.00001, type = "C-classification", kernel = kernel_1,cost = cost_1, gamma=gamma_1, probability = T, seed=i)  
 
+# Prediction stage: test the trained SVM model               
 test.pred <- predict(object=model, newdata=t(NanoString_test_19), probability=TRUE)
 prob.test <- signif(attr(test.pred, "probabilities"), digits=2)
 maxProbs <- apply(prob.test,1,max)
