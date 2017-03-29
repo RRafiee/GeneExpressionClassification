@@ -197,6 +197,22 @@ file.name <- paste(Total.No.of.Samples," samples, ") #
 #file.name <- gsub(" ", "",file.name)
 #------------------------------------
 #############################################################
+# Optimising the Gamma and Cost parameters of RBF kernel 
+
+#I would suggest the following theoretical guidance: 
+#When you are using Gaussian RBF kernel, your separating surface will be based on a combination of bell-shaped surfaces centered
+#at each support vector. The width of each bell-shaped surface will be inversely proportional to γ. 
+#If this width is smaller than the minimum pair-wise distance for your data, you essentially have overfitting.
+#If this width is larger than the maximum pair-wise distance for your data, all your points fall into one class and 
+#you don't have good performance either. So the optimal width should be somewhere between these two extremes
+
+#it is essentially data dependent. Grid search (over log-transformed hyper-parameters) is a very good method if you only 
+#have a small number of hyper-parameters to tune, but don't make the grid resolution too fine or
+#you are likely to over-fit the tuning criterion. For problems with a larger number of kernel parameters,
+#I find the Nelder-Mead simplex method works well.
+
+# Optimising the Gamma and C (parameters of the SVM classifier)
+#--------------------------------------------------------
 
 ### n=101, training set, 13th May 2016
 cost_1 <- 4.4 
@@ -290,21 +306,6 @@ for (ttt in 1:nrow(predProbTemp)) # number of samples
 }
 ####################################### creating pobes2 #############################################
 
-# Optimising the Gamma 
-#I would suggest the following theoretical guidance. 
-#When you are using Gaussian RBF kernel, your separating surface will be based on a combination of bell-shaped surfaces centered
-#at each support vector. The width of each bell-shaped surface will be inversely proportional to γ. 
-#If this width is smaller than the minimum pair-wise distance for your data, you essentially have overfitting.
-#If this width is larger than the maximum pair-wise distance for your data, all your points fall into one class and 
-#you don't have good performance either. So the optimal width should be somewhere between these two extremes
-
-#it is essentially data dependent. Grid search (over log-transformed hyper-parameters) is a very good method if you only 
-#have a small number of hyper-parameters to tune, but don't make the grid resolution too fine or
-#you are likely to over-fit the tuning criterion. For problems with a larger number of kernel parameters,
-#I find the Nelder-Mead simplex method works well.
-
-# Optimising the Gamma and C (parameters of the SVM classifier)
-#--------------------------------------------------------
 # Training stage: using Support Vector Machine (SVM) with RBF kernel. SVM model parameters were optimised based on a grid-based search technique  
 i=1234
 
