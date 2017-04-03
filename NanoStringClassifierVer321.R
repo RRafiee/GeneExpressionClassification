@@ -144,10 +144,10 @@ NanoStriang_mRNA_norm_tech_bio <- NanoStringNorm(
 
 # NanoString.mRNA.norm.tech.bio # results
 # Normalising gene expression data into range of [0 1]
-Nano1_log2_Normalised_4 <- (NanoStriang_mRNA_norm_tech_bio-min(NanoStriang_mRNA_norm_tech_bio))/(max(NanoStriang_mRNA_norm_tech_bio)-min(NanoStriang_mRNA_norm_tech_bio))
-Nano1_log2_Normalised_4 <- as.data.frame(Nano1_log2_Normalised_4)
+Nano1_log2_Normalised <- (NanoStriang_mRNA_norm_tech_bio-min(NanoStriang_mRNA_norm_tech_bio))/(max(NanoStriang_mRNA_norm_tech_bio)-min(NanoStriang_mRNA_norm_tech_bio))
+Nano1_log2_Normalised <- as.data.frame(Nano1_log2_Normalised)
 
-Sample_test <- Nano1_log2_Normalised_4
+Sample_test <- Nano1_log2_Normalised
 pheatmap(Sample_test,color = colorRampPalette(c("navy", "white", "firebrick3"))(100),clustering_method = "ward.D2")
 
 ################################################################################################
