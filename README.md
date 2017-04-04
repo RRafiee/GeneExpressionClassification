@@ -3,8 +3,8 @@
 You can use the [editor on GitHub](https://github.com/RRafiee/GeneExpressionClassification/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 ### 36 features (gene expression) of medulloblastoma (brain tumour) samples (exctracted from RNA materials)
-#
-# Reading NanoString test data  =====>    matrix Sample_test: 
+##
+## Reading NanoString test data  =====>    matrix Sample_test: 
 #                       
 #                         Sample name 
 #
