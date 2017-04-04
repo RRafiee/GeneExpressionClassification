@@ -2,9 +2,77 @@
 
 You can use the [editor on GitHub](https://github.com/RRafiee/GeneExpressionClassification/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-### Markdown
+# 36 features (gene expression) of medulloblastoma (brain tumour) samples (exctracted from RNA materials)
+#
+# Reading NanoString test data  =====>    matrix Sample_test: 
+#                       
+#                         Sample name 
+#
+#                      NMB147 ... NMB154     
+#   Gene name     _                      _
+#    Gene 1      |      2915  ...  5875   |
+#    Gene 2      |                        |
+#    Gene 3      |                        |
+#      ...       |                        | 
+#      ...       |           ...          |
+#      ...       |                        |  
+#    Gene 36     |_                      _|
+#
+#      
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# WNT genes (5)  _
+# 1: DKK2         |
+# 2: EMX2         |
+# 3: GAD1         |
+# 4: TNC          |
+# 5: WIF1        _|
+
+# ----------------     
+# SHH genes (4)  _
+# 6: ATOH1        |
+# 7: EYA1         |
+# 8: HHIP         |
+# 9: SFRP1       _|
+
+# ----------------     
+# Grp3 genes (5) _
+# 10: GABRA5      |
+# 11: IMPG2       |
+# 12: MAB21L2     |
+# 13: NPR3        |
+# 14: NRL        _|
+
+# ----------------     
+# Grp4 genes (5) _
+# 15: EOMES       |
+# 16: KCNA1       |
+# 17: KHDRBS2     |
+# 18: RBM24       |
+# 19: UNC5D      _|
+
+# ----------------     
+# Negative control genes (8)
+# 20: NEG_A
+# 21: NEG_B
+# 22: NEG_C
+# 23: NEG_D
+# 24: NEG_E
+# 25: NEG_F
+# 26: NEG_G
+# 27: NEG_H
+# ----------------     
+# Positive control genes (6)
+# 28: POS_A
+# 29: POS_B
+# 30: POS_C
+# 31: POS_D
+# 32: POS_E
+# 33: POS_F
+# ----------------     
+# Housekeeping genes (3)
+# 34: GAPDH
+# 35: ACTB
+# 36: LDHA
 
 ```markdown
 Syntax highlighted code block
@@ -24,12 +92,3 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RRafiee/GeneExpressionClassification/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
